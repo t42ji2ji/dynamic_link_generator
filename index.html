@@ -30,7 +30,7 @@
         border-radius: 4px;
       }
       button {
-        background-color: #fbaf11;
+        background-color: #001f58;
         border: none;
         color: white;
         padding: 10px 20px;
@@ -65,14 +65,14 @@
         );
         var flavorUrl;
         if (radioGroup.value == 'dev') {
-          flavorUrl = 'https://kryptogodev.page.link/';
+          flavorUrl = 'https://kryptogodev.page.link';
         } else if (radioGroup.value == 'staging') {
-          flavorUrl = 'https://kryptogostaging.page.link/';
+          flavorUrl = 'https://kryptogostaging.page.link';
         } else if (radioGroup.value == 'prod') {
-          flavorUrl = 'https://kryptogo.page.link/';
+          flavorUrl = 'https://kryptogo.page.link';
         }
 
-        var res = `${flavorUrl}?link=${flavorUrl}dapp?url=${inputField.value}&apn=com.kryptogo.walletapp&amv=2&ibi=ccom.kryptogo.walletapp&isi=1593830910&ius=kryptogo`;
+        var res = `${flavorUrl}/scanner?routePath=dapp&url=${inputField.value}`;
 
         var qrcodeElement = document.getElementById('qrcode');
         qrcodeElement.innerHTML = ''; // clear previous content if any
@@ -109,7 +109,7 @@
     </div>
     <div class="container">
       <input type="text" placeholder="Put url here..." />
-      <button onclick="handleClick()">Send</button>
+      <button onclick="handleClick()">GO</button>
     </div>
     <div id="qrcode"></div>
     <span id="output"></span>
